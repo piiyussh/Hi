@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HireReady - Company Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; 
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    color: #2563eb; 
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.login-btn {
+    border: 1px solid #2563eb;
+    background: transparent;
+    color: #2563eb;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #eff6ff;
+}
+
+
+.container {
+    max-width: 1310px;
+    margin: 0px auto;
+    padding: 0 20px;
+}
+
+.container .card {
+    margin: 0px auto;
+}
+
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.company-name {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #666;
+    font-size: 18px;
+}
+
+.location {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.content-text {
+    color: #4b5563;
+}
+
+
+.details-list {
+    list-style: none;
+}
+
+.details-list li {
+    margin-bottom: 8px;
+}
+
+.details-list li::before {
+    content: "•";
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.link {
+    color: #7c3aed; 
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+.job-title {
+    font-size: 20px;
+}
+
+.job-info {
+    color: #666;
+    margin: 5px 0 15px 0;
+}
+
+.view-job-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.view-job-btn:hover {
+    background-color: #1d4ed8;
+}
+
+footer {
+  margin-top: 50px;
+  background: #0f172a;
+  color: #fff;
+  padding: 35px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-right a {
+  margin-left: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">HireReady</div>
+        <nav class="nav-links">
+            <a href="indeex.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="#">Companies</a>
+            <a href="auth.html">
+            <button class="login-btn">Login</button>
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h1 class="company-name">Google</h1>
+            <p class="tagline">Building products that organize the world's information.</p>
+            <div class="location">
+                📍 Bangalore, India
+            </div>
+        </section>
+
+        <section class="card" class="c">
+            <h2 class="section-title">About Google</h2>
+            <p class="content-text">
+                Google is a global technology company focused on building innovative products and services that improve access to information for everyone. From search and ads to cloud and AI, Google works at massive scale.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Company Details</h2>
+            <ul class="details-list">
+                <li><strong>Industry:</strong> Technology</li>
+                <li><strong>Founded:</strong> 1998</li>
+                <li><strong>Employees:</strong> 150,000+</li>
+                <li><strong>Website:</strong> <a href="https://www.google.com" class="link">www.google.com</a></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Open Positions</h2>
+            <div class="job-item">
+                <h3 class="job-title">Frontend Developer</h3>
+                <p class="job-info">Bangalore · ₹10–15 LPA</p>
+                <a href="view.html">
+                <button class="view-job-btn">View Job</button>
+                </a>
+                <h3 class="job-title">Backend Developer</h3>
+                <p class="job-info">Remote · ₹12–18 LPA</p>
+                <a href="view.html">
+                <button class="view-job-btn">View Job</button>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+     <footer>
+    <div class="footer-left">
+      © 2026 HireReady. All rights reserved.
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>

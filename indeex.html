@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HireReady | Find Your Dream Job</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --primary: #2563eb;
+  --bg-light: #f6f9fc;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --radius: 16px;
+  --shadow: 0 15px 30px rgba(0,0,0,0.06);
+  --transition: all 0.3s ease;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  padding: 18px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+
+.hero {
+  background: var(--white);
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text { max-width: 520px; }
+.hero-text h1 { font-size: 38px; margin-bottom: 16px; }
+.hero-text p { color: var(--text-muted); margin-bottom: 28px; }
+
+.cta-btn {
+  background: var(--primary);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero-jobs { line-height: 1.8; font-size: 15px; }
+
+
+section { padding: 70px 80px; }
+section h2 { font-size: 28px; margin-bottom: 30px; }
+
+
+.companies { display: flex; gap: 24px; flex-wrap: wrap; }
+.company { background: var(--white); padding: 18px 34px; border-radius: 12px; box-shadow: var(--shadow); transition: var(--transition); }
+
+
+.cards, .steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card, .step { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+.step { position: relative; }
+.step span {
+  position: absolute; top: -16px; left: -16px;
+  background: var(--primary); color: var(--white);
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-weight: 700;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.testimonial { background: var(--white); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); font-style: italic; }
+
+
+footer {
+  background: #0f172a; color: var(--white);
+  padding: 24px 80px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer a { color: var(--white); margin-left: 18px; text-decoration: none; }
+
+
+
+
+@media (max-width: 768px) {
+  header { padding: 16px 20px; }
+  nav a { display: none; } 
+  
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  section { padding: 40px 20px; }
+  
+  .cards, .steps, .testimonials { grid-template-columns: 1fr; }
+  
+  .companies { justify-content: center; }
+  
+  footer {
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header { padding: 18px 40px; }
+  section { padding: 50px 40px; }
+  .hero { padding: 60px 40px; }
+
+  .cards, .steps { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HireReady</div>
+  <nav>
+    <a href="indeex.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="company.html">Companies</a>
+    <a href="auth.html">
+    <button class="login-btn">Login</button>
+    </a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Find Your Dream Job Today</h1>
+    <p>Connecting top talent with leading companies across India.</p>
+    <a href="jobs.html">
+    <button class="cta-btn">Browse Jobs</button>
+    </a>
+  </div>
+  <div class="hero-jobs">
+    <strong>Frontend Developer</strong><br>₹10–15 LPA · Bangalore<br>
+    <strong>Backend Developer</strong><br>₹12–18 LPA · Remote
+  </div>
+</div>
+
+<section>
+  <h2>Trusted by Top Companies</h2>
+  <div class="companies">
+    <div class="company">Google</div>
+    <div class="company">Amazon</div>
+    <div class="company">Microsoft</div>
+    <div class="company">Flipkart</div>
+  </div>
+</section>
+
+<section>
+  <h2>Popular Job Categories</h2>
+  <div class="cards">
+    <div class="card"><h3>Frontend Developer</h3><p>120+ Jobs</p></div>
+    <div class="card"><h3>Backend Developer</h3><p>95+ Jobs</p></div>
+    <div class="card"><h3>Data Analyst</h3><p>80+ Jobs</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>How HireReady Works</h2>
+  <div class="steps">
+    <div class="step"><span>1</span><h3>Create Profile</h3><p>Sign up and build your profile.</p></div>
+    <div class="step"><span>2</span><h3>Apply for Jobs</h3><p>Browse and apply with one click.</p></div>
+    <div class="step"><span>3</span><h3>Get Hired</h3><p>Attend interviews and land the job.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>What Our Users Say</h2>
+  <div class="testimonials">
+    <div class="testimonial">“HireReady helped me get placed within 2 weeks.”<br><br>— <strong>Ankit</strong></div>
+    <div class="testimonial">“The UI is clean and listings are super relevant.”<br><br>— <strong>Neha</strong></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 HireReady. All rights reserved.</p>
+  <div>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Support</a>
+  </div>
+</footer>
+
+</body>
+</html>

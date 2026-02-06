@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs | HireReady</title>
+    <style>
+      
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a73e8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+.login-btn {
+    border: 1px solid #1a73e8;
+    background: transparent;
+    color: #1a73e8;
+    padding: 6px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.content-wrapper {
+    width: 90%;
+    max-width: 850px; 
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-top: -15px;
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+.filter-group {
+    margin-top: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+
+.job-title { font-size: 1.4rem; }
+.salary { font-weight: 600; color: #444; }
+.view-btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    width: auto;
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.pg-btn {
+    border: 1px solid #2563eb;
+    background: white;
+    color: #2563eb;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.footer {
+    background: #0f172a; 
+    color: white;
+    padding: 30px 10%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        max-width: 700px; 
+    }
+    .navbar {
+        padding: 15px 3%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    nav a {
+        display: none; 
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .content-wrapper {
+        width: 95%; 
+        margin: 10px auto;
+        gap: 10px;
+    }
+
+    .card {
+        padding: 15px; 
+    }
+
+    .job-title {
+        font-size: 1.2rem;
+    }
+
+    .view-btn {
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .filter-group h4 {
+        font-size: 0.9rem;
+    }
+    .filter-group label {
+        font-size: 0.85rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">HireReady</div>
+        <nav>
+            <a href="indeex.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="company.html">Companies</a>
+            <a href="auth.html">
+            <button class="login-btn">Login</button>
+            </a>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        
+        <section class="card filter-section">
+            <h3>Filter Jobs</h3>
+            
+            <div class="filter-group">
+                <h4>Location</h4>
+                <label><input type="checkbox"> Remote</label>
+                <label><input type="checkbox"> Bangalore</label>
+                <label><input type="checkbox"> Delhi</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Job Type</h4>
+                <label><input type="checkbox"> Full Time</label>
+                <label><input type="checkbox"> Internship</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Experience</h4>
+                <label><input type="radio" name="exp"> 0–1 Years</label>
+                <label><input type="radio" name="exp"> 2–4 Years</label>
+                <label><input type="radio" name="exp"> 5+ Years</label>
+            </div>
+        </section>
+
+        <section class="card job-card">
+            <h2 class="job-title">Frontend Developer</h2>
+            <p class="company-loc">Google · Bangalore</p>
+            <p class="salary">₹10–15 LPA</p>
+            <p class="tech-stack">HTML CSS JavaScript</p>
+            <a href="view.html">
+            <button class="view-btn">View Details</button>
+            </a>
+        </section>
+
+        <section class="card job-card">
+            <h2 class="job-title">Backend Developer</h2>
+            <p class="company-loc">Amazon · Remote</p>
+            <p class="salary">₹12–18 LPA</p>
+            <p class="tech-stack">Node.js Express MongoDB</p>
+            <a href="view.html">
+            <button class="view-btn">View Details</button>
+            </a>
+        </section>
+
+         <section class="card job-card">
+            <h2 class="job-title">Data Analyst</h2>
+            <p class="company-loc">Flipkart . Bangalore</p>
+            <p class="salary">₹8-12 LPA</p>
+            <p class="tech-stack">SQL Excel Python</p>
+            <a href="view.html">
+            <button class="view-btn">View Details</button>
+            </a>
+        </section>
+
+        <div class="pagination">
+            <button class="pg-btn">Prev</button>
+            <span>Page 1 of 5</span>
+            <button class="pg-btn">Next</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 HireReady. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
